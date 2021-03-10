@@ -336,6 +336,8 @@ export default {
             deleteUser(id).then(res => {
                 console.log('删除用户请求',res)
             })
+            //删除成功后重新刷新用户列表
+            this._getUserList()
         }).catch(err => {
             console.log('取消删除',err)
             this.$message.error('已取消删除用户')
