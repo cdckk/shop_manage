@@ -63,10 +63,8 @@ export default {
         if(res) {
           this.$message.success('登录成功')
           loginRequest(this.loginForm).then(res => {
-            console.log('登录请求', res)
             //保持token到sessionStorage中
             window.sessionStorage.setItem("token", res.data.data.token)
-            console.log('登录请求', res.data.data.token)
             this.$router.push('/home')
           })
         } else {
