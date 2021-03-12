@@ -48,3 +48,14 @@ export function deleteUser() {
         method: 'delete'
     })
 }
+
+//分配用户角色
+export function putSaveRidInfo(id,rid) {
+    return request({
+        url: `users/${id}/role`,
+        method: 'put',
+        data: {
+            rid
+        }
+    })
+}
